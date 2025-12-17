@@ -16,7 +16,13 @@ export const postData = [
     likes: 403,
     repost: 7,
     postText: "My human catched me some fish today! Such a good human.",
-    replies: [],
+    replies: [
+      {
+        handle: `@Mr. Fluffykins`,
+        profilePic: `./images/fluffy.jpg`,
+        postText: `Lucky you! My human only gives me dry food.`,
+      },
+    ],
     isLiked: false,
     isReposted: false,
     uuid: "8d7fsd9s-d7fs-4f3d-93f3-87gdf6s5g4d6",
@@ -27,7 +33,18 @@ export const postData = [
     likes: 63,
     repost: 5,
     postText: "There was a red dot on the wall. I chased it for hours.",
-    replies: [],
+    replies: [
+      {
+        handle: `@Oreo`,
+        profilePic: `./images/oreo.jpg`,
+        postText: `I saw that red dot too! It ran behind the couch and disappeared.`,
+      },
+      {
+        handle: `@Mittens`,
+        profilePic: `./images/mittens.jpg`,
+        postText: `My human tried to catch it with a stick, but it was too fast!`,
+      },
+    ],
     isLiked: false,
     isReposted: false,
     uuid: "ff98d7s-d7fs-4f3d-93f3-87gdf6s5g4d6",

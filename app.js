@@ -57,6 +57,9 @@ function getFeedHtml() {
     if (post.isReposted) {
       repostIconClass = "reposted";
     }
+    if (post.replies.length > 0) {
+      console.log(post.uuid);
+    }
 
     feedHtml += `
     <div class="post">
