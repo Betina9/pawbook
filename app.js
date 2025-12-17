@@ -45,7 +45,7 @@ function handleRepostClick(postId) {
 function getFeedHtml() {
   let feedHtml = ``;
 
-  postData.forEach(function (tweet) {
+  postData.forEach(function (post) {
     let likeIconClass = "";
 
     if (post.isLiked) {
