@@ -20,7 +20,7 @@ function handleLikeClick(postId) {
   })[0];
 
   if (targetPostObj.isLiked) {
-    targetTweetObj.likes--;
+    targetPostObj.likes--;
   } else {
     targetPostObj.likes++;
   }
@@ -30,7 +30,7 @@ function handleLikeClick(postId) {
 
 function handleRepostClick(postId) {
   const targetRepostObj = postData.filter(function (post) {
-    return tweet.uuid === postId;
+    return post.uuid === postId;
   })[0];
 
   if (targetRepostObj.isReposted) {
@@ -79,7 +79,7 @@ function getFeedHtml() {
               ${post.likes}
               </span>
               <span class="post-detail">
-              <i class="fa-solid fa-repost ${repostIconClass}"
+              <i class="fa-solid fa-retweet ${repostIconClass}"
               data-repost="${post.uuid}"
               ></i>
               ${post.repost}
