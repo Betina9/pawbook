@@ -24,7 +24,7 @@ export const postData = [
   {
     handle: "@Sir Meows-a-Lot",
     profilePic: "./images/meowalot.jpg",
-    likes: 37,
+    likes: 63,
     repost: 5,
     postText: "There was a red dot on the wall. I chased it for hours.",
     replies: [],

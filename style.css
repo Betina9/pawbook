@@ -9,7 +9,7 @@ body {
 h1 {
   color: #0f8cdf;
   margin-bottom: 10px;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 i {
@@ -33,7 +33,7 @@ reposted {
 
 main,
 header {
-  width: 290px;
+  width: 350px;
   margin: 0 auto;
 }
 
@@ -52,7 +52,8 @@ header {
 /* textareas + btn */
 
 textarea {
-  border: none;
+  border: 1px solid rgb(216, 213, 213);
+  border-radius: 10px;
   resize: none;
   padding: 10px;
   margin: 0 0 20px 0;
@@ -77,9 +78,9 @@ button {
 
 .post {
   border-top: 1px solid lightgray;
-  padding: 20px 0 0 0;
+  padding: 30px 0 0 0;
   width: 100%;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .post-inner {
@@ -90,14 +91,14 @@ button {
 
 .post-details {
   display: flex;
-  font-size: 13px;
+  font-size: 15px;
   justify-content: space-between;
-  width: 160px;
+  width: 230px;
 }
 
 .post-detail {
   display: flex;
-  gap: 4px;
+  gap: 5px;
 }
 
 .post-reply {
@@ -108,21 +109,21 @@ button {
 }
 
 .handle {
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 500;
   color: #555;
   margin-top: 0;
 }
 
 .post-text {
-  width: 207px;
-  font-size: 14px;
+  width: 220px;
+  font-size: 1.3rem;
   line-height: 20px;
 }
 
 /* Images*/
 .logo {
-  width: 40px;
+  width: 50px;
   height: auto;
   object-fit: contain;
   margin-top: 22px;
@@ -131,7 +132,15 @@ button {
 .bubble-pic {
   border: 1px solid lightgray;
   border-radius: 50%;
-  width: 48px;
+  width: 70px;
+}
+
+.profile-pic {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
 }
 
 /* utility */
