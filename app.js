@@ -11,6 +11,8 @@ document.addEventListener("click", function (e) {
     handleLikeClick(e.target.dataset.like);
   } else if (e.target.dataset.repost) {
     handleRepostClick(e.target.dataset.repost);
+  } else if (e.target.dataset.reply) {
+    handleReplyClick(e.target.dataset.reply);
   }
 });
 
@@ -42,6 +44,10 @@ function handleRepostClick(postId) {
   render();
 }
 
+function handleReplyClick(replyId) {
+  document.getElementById(`replies-${replyId}`).classList.toggle("hidden");
+}
+
 function getFeedHtml() {
   let feedHtml = ``;
 
@@ -57,8 +63,23 @@ function getFeedHtml() {
     if (post.isReposted) {
       repostIconClass = "reposted";
     }
+
+    let repliesHtml = "";
+
     if (post.replies.length > 0) {
-      console.log(post.uuid);
+      post.replies.forEach(function (reply) {
+        repliesHtml += `
+        <div class="post-reply">
+          <div class="post-inner">
+           <img src="${reply.profilePic}" class="profile-pic">
+            <div>
+             <p class="handle">${reply.handle}</p>
+              <p class="post-text">${reply.postText}</p>
+           </div>
+          </div>
+        </div>
+        `;
+      });
     }
 
     feedHtml += `
@@ -90,6 +111,9 @@ function getFeedHtml() {
             </div>
             </div>
         </div>
+          <div class="hidden" id="replies-${post.uuid}">
+            ${repliesHtml}
+            </div>
         </div>    
     `;
   });
