@@ -1,6 +1,5 @@
 import { postData } from "./data.js";
 const postInput = document.getElementById("post-input");
-const postBtn = document.getElementById("post-btn");
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
