@@ -2,10 +2,6 @@ import { postData } from "./data.js";
 const postInput = document.getElementById("post-input");
 const postBtn = document.getElementById("post-btn");
 
-postBtn.addEventListener("click", function () {
-  console.log(postInput.value);
-});
-
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like);
@@ -13,6 +9,8 @@ document.addEventListener("click", function (e) {
     handleRepostClick(e.target.dataset.repost);
   } else if (e.target.dataset.reply) {
     handleReplyClick(e.target.dataset.reply);
+  } else if (e.target.id === "post-btn") {
+    handlePostBtnClick();
   }
 });
 
@@ -46,6 +44,10 @@ function handleRepostClick(postId) {
 
 function handleReplyClick(replyId) {
   document.getElementById(`replies-${replyId}`).classList.toggle("hidden");
+}
+
+function handlePostBtnClick() {
+  console.log(postInput.value);
 }
 
 function getFeedHtml() {
