@@ -1,4 +1,6 @@
 import { postData } from "./data.js";
+import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+
 const postInput = document.getElementById("post-input");
 
 document.addEventListener("click", function (e) {
@@ -46,7 +48,19 @@ function handleReplyClick(replyId) {
 }
 
 function handlePostBtnClick() {
-  console.log(postInput.value);
+  postData.unshift({
+    handle: `@Mjauritz`,
+    profilePic: `./images/fluffy.jpg`,
+    likes: 0,
+    repost: 0,
+    postText: postInput.value,
+    replies: [],
+    isLiked: false,
+    isReposted: false,
+    uuid: uuidv4(),
+  });
+  render();
+  postInput.value = "";
 }
 
 function getFeedHtml() {
